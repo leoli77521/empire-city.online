@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 基础Meta标签 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Empire City online - Build and manage your own empire in this strategic city building puzzle game. Free to play at Empire City Online.">
+    <meta name="keywords" content="empire city, city building game, strategy game, simulation game, online building game">
+    <meta name="author" content="Empire City Online">
+    
+    <!-- SEO优化 -->
+    <title>Empire City - City Building Strategy Game | Empire City Online</title>
+    <link rel="canonical" href="https://empire-city.online/empire-city.html">
+    
+    <!-- Open Graph 社交媒体优化 -->
+    <meta property="og:title" content="Empire City - City Building Strategy Game">
+    <meta property="og:description" content="Build and manage your own empire in this strategic city simulation">
+    <meta property="og:url" content="https://empire-city.online/empire-city.html">
+    <meta property="og:type" content="article">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 自定义样式配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-gray': '#1d1d1f',
+                        'apple-light': '#f5f5f7',
+                        'apple-blue': '#007aff',
+                        'apple-dark': '#1a1a1a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style>
+        .game-iframe {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .fullscreen-btn:hover {
+            transform: scale(1.05);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-apple-light text-apple-gray font-sans">
+    <!-- 全局导航菜单 -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- 网站Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-apple-blue">
+                        Empire City Online
+                    </a>
+                </div>
+                
+                <!-- 导航菜单 -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="action.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Action</a>
+                        <a href="shooting.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Shooting</a>
+                        <a href="puzzle.html" class="text-apple-blue hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Puzzle</a>
+                        <a href="strategy.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Strategy</a>
+                        <a href="sports.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Sports</a>
+                    </div>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-600 hover:text-apple-blue" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                <a href="index.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Home</a>
+                <a href="action.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Action</a>
+                <a href="shooting.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Shooting</a>
+                <a href="puzzle.html" class="text-apple-blue block px-3 py-2 text-base font-medium">Puzzle</a>
+                <a href="strategy.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Strategy</a>
+                <a href="sports.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Sports</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 游戏标题区域 -->
+        <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- 游戏图标 -->
+                    <div class="text-8xl mb-4 md:mb-0 md:mr-8">🏙️</div>
+                    
+                    <!-- 游戏信息 -->
+                    <div class="text-center md:text-left">
+                        <!-- 主标题 H1 -->
+                        <h1 class="text-4xl md:text-5xl font-bold mb-2">
+                            Empire City
+                        </h1>
+                        <p class="text-xl md:text-2xl opacity-90 mb-4">
+                            Build and manage your own thriving metropolis
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                            <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">
+                                🧩 Puzzle Strategy
+                            </span>
+                            <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">
+                                ⭐ 4.9 Rating
+                            </span>
+                            <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">
+                                🆓 Free to Play
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏播放区域 -->
+        <section class="py-8 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 游戏容器 -->
+                <div class="bg-gray-100 rounded-xl p-4 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-bold">🎮 Play Empire City</h2>
+                        <button onclick="toggleFullscreen()" class="bg-apple-blue text-white px-4 py-2 rounded-lg fullscreen-btn hover:bg-blue-600 transition-colors">
+                            🔍 Fullscreen
+                        </button>
+                    </div>
+                    
+                    <!-- 游戏iframe -->
+                    <div class="relative" style="padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+                        <iframe 
+                            id="game-frame"
+                            src="https://games.crazygames.com/en_US/empire-city/index.html"
+                            class="game-iframe absolute top-0 left-0 w-full h-full"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Empire City Game">
+                        </iframe>
+                    </div>
+                    
+                    <!-- 游戏控制提示 -->
+                    <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-semibold mb-2">🎯 Game Controls:</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700">
+                            <p>• Mouse: Build and place structures</p>
+                            <p>• Left Click: Select and confirm actions</p>
+                            <p>• Right Click: Cancel or go back</p>
+                            <p>• Scroll: Zoom in and out</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏介绍详情 -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 游戏概述 H2 -->
+                <h2 class="text-3xl font-bold mb-8">About Empire City</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- 游戏描述 -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">🏗️ Game Overview</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Empire City is an immersive city-building strategy game that challenges you to create and manage a thriving metropolis. Start with a small settlement and transform it into a grand empire through careful planning, resource management, and strategic decision-making. Balance the needs of your citizens while expanding your city's infrastructure and economy.
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4">🎯 Key Features</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 mt-1">✓</span>
+                                <span>Comprehensive city planning and management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 mt-1">✓</span>
+                                <span>Resource management and economic planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 mt-1">✓</span>
+                                <span>Multiple building types and upgrades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 mt-1">✓</span>
+                                <span>Population happiness and satisfaction system</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2 mt-1">✓</span>
+                                <span>Beautiful graphics and smooth gameplay</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 游戏统计 -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">📊 Game Statistics</h3>
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-apple-blue">4.9</div>
+                                    <div class="text-sm text-gray-600">User Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-green-600">Free</div>
+                                    <div class="text-sm text-gray-600">Cost</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-purple-600">Strategy</div>
+                                    <div class="text-sm text-gray-600">Genre</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-orange-600">Medium</div>
+                                    <div class="text-sm text-gray-600">Difficulty</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 建设类型 -->
+                        <div class="mt-6">
+                            <h3 class="text-xl font-bold mb-4">🏢 Building Types</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-blue-50 rounded-lg p-3 text-center">
+                                    <div class="text-2xl mb-1">🏠</div>
+                                    <div class="text-sm font-medium">Residential</div>
+                                </div>
+                                <div class="bg-green-50 rounded-lg p-3 text-center">
+                                    <div class="text-2xl mb-1">🏢</div>
+                                    <div class="text-sm font-medium">Commercial</div>
+                                </div>
+                                <div class="bg-yellow-50 rounded-lg p-3 text-center">
+                                    <div class="text-2xl mb-1">🏭</div>
+                                    <div class="text-sm font-medium">Industrial</div>
+                                </div>
+                                <div class="bg-purple-50 rounded-lg p-3 text-center">
+                                    <div class="text-2xl mb-1">🏛️</div>
+                                    <div class="text-sm font-medium">Public</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 游戏策略提示 -->
+                        <div class="mt-6">
+                            <h3 class="text-xl font-bold mb-4">💡 Strategy Tips</h3>
+                            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
+                                <ul class="space-y-2 text-sm text-gray-700">
+                                    <li>• Balance residential, commercial, and industrial zones</li>
+                                    <li>• Keep citizens happy with adequate services</li>
+                                    <li>• Plan infrastructure before expanding</li>
+                                    <li>• Monitor your budget and resource flow</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 城市建设指南 -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 建设指南标题 H2 -->
+                <h2 class="text-3xl font-bold text-center mb-12">City Building Guide</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 规划阶段 -->
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">📋</div>
+                        <h3 class="text-xl font-bold mb-2">1. Planning Phase</h3>
+                        <p class="text-gray-600">Start with a master plan. Designate areas for different zone types and plan your road network carefully.</p>
+                    </div>
+                    
+                    <!-- 建设阶段 -->
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">🏗️</div>
+                        <h3 class="text-xl font-bold mb-2">2. Construction Phase</h3>
+                        <p class="text-gray-600">Begin with essential infrastructure, then gradually add residential, commercial, and industrial buildings.</p>
+                    </div>
+                    
+                    <!-- 管理阶段 -->
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">📈</div>
+                        <h3 class="text-xl font-bold mb-2">3. Management Phase</h3>
+                        <p class="text-gray-600">Monitor city services, citizen happiness, and economic growth. Adjust and expand as needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关游戏推荐 -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 推荐标题 H2 -->
+                <h2 class="text-3xl font-bold text-center mb-12">More Strategy & Puzzle Games</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Boom Karts 推荐 -->
+                    <div class="bg-white rounded-xl p-6 flex items-center">
+                        <div class="text-6xl mr-6">🏎️</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Boom Karts</h3>
+                            <p class="text-gray-600 mb-3">Experience explosive kart racing with strategic puzzle elements and exciting gameplay.</p>
+                            <a href="boom-karts.html" class="bg-apple-blue text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors inline-block">
+                                Play Now
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 返回分类页 -->
+                    <div class="bg-purple-50 rounded-xl p-6 flex items-center">
+                        <div class="text-6xl mr-6">🧩</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">More Puzzle Games</h3>
+                            <p class="text-gray-600 mb-3">Explore our complete collection of challenging puzzle and strategy games.</p>
+                            <a href="puzzle.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors inline-block">
+                                Browse All
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 网站底部 -->
+    <footer class="bg-apple-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- 网站信息 -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">Empire City Online</h3>
+                    <p class="text-gray-300 mb-4">
+                        Build your dream city with Empire City. Experience the ultimate city-building strategy game with endless possibilities.
+                    </p>
+                </div>
+                
+                <!-- 游戏分类链接 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Game Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="action.html" class="text-gray-300 hover:text-white transition-colors">Action Games</a></li>
+                        <li><a href="shooting.html" class="text-gray-300 hover:text-white transition-colors">Shooting Games</a></li>
+                        <li><a href="puzzle.html" class="text-white font-medium">Puzzle Games</a></li>
+                        <li><a href="strategy.html" class="text-gray-300 hover:text-white transition-colors">Strategy Games</a></li>
+                        <li><a href="sports.html" class="text-gray-300 hover:text-white transition-colors">Sports Games</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系信息 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300">
+                        Visit: empire-city.online<br>
+                        For more city building games
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Empire City Online. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 功能 -->
+    <script>
+        // 移动端菜单切换功能
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 全屏功能
+        function toggleFullscreen() {
+            const iframe = document.getElementById('game-frame');
+            
+            if (!document.fullscreenElement) {
+                iframe.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // 监听全屏变化
+        document.addEventListener('fullscreenchange', function() {
+            const btn = document.querySelector('.fullscreen-btn');
+            if (document.fullscreenElement) {
+                btn.textContent = '🗗 Exit Fullscreen';
+            } else {
+                btn.textContent = '🔍 Fullscreen';
+            }
+        });
+    </script>
+</body>
+</html> 

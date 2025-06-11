@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 基础Meta标签 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play exciting sports games online - Basketball Superstars and more athletic games for free at Empire City Online.">
+    <meta name="keywords" content="sports games, basketball games, athletic games, online sports games, free sports games">
+    <meta name="author" content="Empire City Online">
+    
+    <!-- SEO优化 -->
+    <title>Sports Games - Empire City Online | Free Basketball & Athletic Games</title>
+    <link rel="canonical" href="https://empire-city.online/sports.html">
+    
+    <!-- Open Graph 社交媒体优化 -->
+    <meta property="og:title" content="Sports Games - Empire City Online">
+    <meta property="og:description" content="Compete in thrilling sports games and become a champion">
+    <meta property="og:url" content="https://empire-city.online/sports.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 自定义样式配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-gray': '#1d1d1f',
+                        'apple-light': '#f5f5f7',
+                        'apple-blue': '#007aff',
+                        'apple-dark': '#1a1a1a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style>
+        .game-card:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-apple-light text-apple-gray font-sans">
+    <!-- 全局导航菜单 -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- 网站Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-apple-blue">
+                        Empire City Online
+                    </a>
+                </div>
+                
+                <!-- 导航菜单 -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="action.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Action</a>
+                        <a href="shooting.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Shooting</a>
+                        <a href="puzzle.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Puzzle</a>
+                        <a href="strategy.html" class="text-gray-600 hover:text-apple-blue px-3 py-2 text-sm font-medium transition-colors">Strategy</a>
+                        <a href="sports.html" class="text-apple-blue border-b-2 border-apple-blue px-3 py-2 text-sm font-medium">Sports</a>
+                    </div>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-600 hover:text-apple-blue" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                <a href="index.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Home</a>
+                <a href="action.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Action</a>
+                <a href="shooting.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Shooting</a>
+                <a href="puzzle.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Puzzle</a>
+                <a href="strategy.html" class="text-gray-600 hover:text-apple-blue block px-3 py-2 text-base font-medium">Strategy</a>
+                <a href="sports.html" class="text-apple-blue block px-3 py-2 text-base font-medium">Sports</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 页面标题区域 -->
+        <section class="bg-gradient-to-r from-orange-500 to-red-600 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- 主标题 H1 -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    🏀 Sports Games
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90">
+                    Compete and become a champion in exciting sports games
+                </p>
+            </div>
+        </section>
+
+        <!-- 游戏列表 -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 分类描述 H2 -->
+                <h2 class="text-3xl font-bold text-center mb-4">Athletic Competition Games</h2>
+                <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                    Experience the thrill of competition with our sports games. From basketball to other athletic challenges, test your skills and become a champion.
+                </p>
+                
+                <!-- 游戏网格 -->
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
+                    <!-- Basketball Superstars 游戏卡片 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden game-card border border-gray-200">
+                        <div class="h-64 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                            <span class="text-8xl">🏀</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-4">Basketball Superstars</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                                Step into the arena and become a basketball legend! Experience realistic basketball gameplay with challenging matches, skill development, and exciting tournaments. Perfect your shooting, passing, and strategy to dominate the court.
+                            </p>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center space-x-3">
+                                    <span class="px-4 py-2 bg-blue-100 text-blue-800 text-sm rounded-full font-medium">Sports</span>
+                                    <span class="px-4 py-2 bg-orange-100 text-orange-800 text-sm rounded-full font-medium">Basketball</span>
+                                    <span class="px-4 py-2 bg-green-100 text-green-800 text-sm rounded-full font-medium">Competition</span>
+                                </div>
+                                <div class="flex items-center text-yellow-500">
+                                    <span class="text-lg font-bold">4.9</span>
+                                    <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- 游戏特性 -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold mb-3">Game Features:</h4>
+                                <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Realistic gameplay
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Multiple game modes
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Skill development
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Tournament system
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <a href="basketball-superstars.html" class="w-full bg-apple-blue text-white px-8 py-4 rounded-lg hover:bg-blue-600 transition-colors text-center block font-bold text-lg">
+                                🏀 Play Basketball Superstars
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 即将推出的游戏 -->
+                <div class="mt-16">
+                    <h2 class="text-2xl font-bold text-center mb-8">Coming Soon</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-gray-100 rounded-xl p-6 text-center">
+                            <div class="text-4xl mb-3">⚽</div>
+                            <h3 class="font-bold mb-2">Soccer Champions</h3>
+                            <p class="text-gray-600 text-sm">Football simulation game</p>
+                        </div>
+                        <div class="bg-gray-100 rounded-xl p-6 text-center">
+                            <div class="text-4xl mb-3">🏈</div>
+                            <h3 class="font-bold mb-2">American Football</h3>
+                            <p class="text-gray-600 text-sm">NFL-style gameplay</p>
+                        </div>
+                        <div class="bg-gray-100 rounded-xl p-6 text-center">
+                            <div class="text-4xl mb-3">🎾</div>
+                            <h3 class="font-bold mb-2">Tennis Pro</h3>
+                            <p class="text-gray-600 text-sm">Professional tennis matches</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 体育游戏益处 -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 益处标题 H2 -->
+                <h2 class="text-3xl font-bold text-center mb-12">Why Play Sports Games?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 竞技精神 -->
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">🏆</div>
+                        <h3 class="text-xl font-bold mb-2">Competitive Spirit</h3>
+                        <p class="text-gray-600">Develop your competitive edge and strive for excellence in every match</p>
+                    </div>
+                    
+                    <!-- 策略思维 -->
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">🧭</div>
+                        <h3 class="text-xl font-bold mb-2">Strategic Thinking</h3>
+                        <p class="text-gray-600">Learn tactical decision-making and team coordination skills</p>
+                    </div>
+                    
+                    <!-- 技能提升 -->
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">📈</div>
+                        <h3 class="text-xl font-bold mb-2">Skill Development</h3>
+                        <p class="text-gray-600">Improve reflexes, hand-eye coordination, and timing through gameplay</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 返回首页引导 -->
+        <section class="py-12 bg-orange-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl font-bold mb-4">Explore More Game Categories</h2>
+                <p class="text-gray-600 mb-6">
+                    Discover puzzle challenges, action adventures, and strategic gameplay
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="index.html" class="bg-apple-blue text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                        Back to Home
+                    </a>
+                    <a href="puzzle.html" class="bg-white text-apple-blue border-2 border-apple-blue px-6 py-3 rounded-lg hover:bg-apple-blue hover:text-white transition-colors">
+                        Puzzle Games
+                    </a>
+                    <a href="action.html" class="bg-white text-apple-blue border-2 border-apple-blue px-6 py-3 rounded-lg hover:bg-apple-blue hover:text-white transition-colors">
+                        Action Games
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 网站底部 -->
+    <footer class="bg-apple-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- 网站信息 -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">Empire City Online</h3>
+                    <p class="text-gray-300 mb-4">
+                        Compete in exciting sports games and become a champion. Experience the thrill of athletic competition!
+                    </p>
+                </div>
+                
+                <!-- 游戏分类链接 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Game Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="action.html" class="text-gray-300 hover:text-white transition-colors">Action Games</a></li>
+                        <li><a href="shooting.html" class="text-gray-300 hover:text-white transition-colors">Shooting Games</a></li>
+                        <li><a href="puzzle.html" class="text-gray-300 hover:text-white transition-colors">Puzzle Games</a></li>
+                        <li><a href="strategy.html" class="text-gray-300 hover:text-white transition-colors">Strategy Games</a></li>
+                        <li><a href="sports.html" class="text-white font-medium">Sports Games</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系信息 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300">
+                        Visit: empire-city.online<br>
+                        For the best sports gaming experience
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Empire City Online. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 功能 -->
+    <script>
+        // 移动端菜单切换功能
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
