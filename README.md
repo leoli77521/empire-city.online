@@ -56,4 +56,4 @@ Empire City Online (empire-city.online) 是一个专业的多网页游戏网站�
 - 遵循W3C标准
 - 使用语义化HTML标签
 - 详细的中文代码注释
-- 移动优先的响应式设计 
+- 移动优先的响应式设计  
